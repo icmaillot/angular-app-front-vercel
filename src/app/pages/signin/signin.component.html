@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>Connexion</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Pseudo</mat-label>
+      <input matInput type="text" id="pseudo" formControlName="pseudo" />
+      <mat-error *ngIf="loginForm.controls.pseudo.hasError('required')"
+        >Le pseudo est obligatoire</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Mot de passe</mat-label>
+      <input
+        matInput
+        type="password"
+        id="password"
+        formControlName="password"
+      />
+      <mat-error *ngIf="loginForm.controls.password.hasError('required')"
+        >Le mot de passe est obligatoire</mat-error
+      >
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="!loginForm.valid"
+    >
+      Se connecter
+    </button>
+  </form>
+  <div>
+    <span>
+      Pas encore inscrit :
+      <button class="redirection" (click)="goToSignup()">Inscription</button>
+    </span>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<nav>
+  <ng-container *ngIf="authService.isLoggedIn">
+    <a routerLink="/articles">articles</a>
+    <a routerLink="/hystory">historique</a>
+    <a routerLink="/add-product"> addProduct</a>
+    <div class="search-container">
+      <input type="text" placeholder="Rechercher un produit" #searchInput />
+      <button (click)="searchProducts()">Rechercher</button>
+    </div>
+    <button class="logout" (click)="logout()">logout</button>
+  </ng-container>
+  
+  <ng-container *ngIf="!authService.isLoggedIn">
+    <a routerLink="/signup">Inscription</a>
+    <a routerLink="/signin">Connexion</a>
+  </ng-container>
+</nav>

@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+a {
+  cursor: pointer;
+}
+
+.redirection {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
