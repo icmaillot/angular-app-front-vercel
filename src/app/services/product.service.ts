@@ -8,7 +8,7 @@ import { Product } from '../interfaces/product';
 })
 export class ProductService {
 
-  private apiUrl = 'https://server-angular-app.vercel.app/auth';
+  private apiUrl = 'https://server-angular-app.vercel.app/products';
 
   constructor(private http: HttpClient) { }
 
