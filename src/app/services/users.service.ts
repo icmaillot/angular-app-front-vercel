@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  private apiUrl = 'https://server-angular-app.vercel.app/auth';
+  private apiUrl = 'https://server-angular-app.vercel.app/users';
   private endPoint= "purchases"
   
   constructor(private http: HttpClient) {}
